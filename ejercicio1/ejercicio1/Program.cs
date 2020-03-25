@@ -9,25 +9,65 @@ namespace ejercicio1
     class Program
     {
         static void Main(string[] args)
-        { 
-            Dictionary<string, int> values = new Dictionary<string, int>();
+
+
+        {
+
+
+
+
+            Dictionary<string, int> value = new Dictionary<string, int>();
             //Rellenar diccionario con add 
 
-            values.Add("Juan", 55423412);
-            values.Add("Ernesto", 56985623);
-            values.Add("Mariana", 54787451);
+            value.Add("Juan", 55423412);
+            value.Add("Ernesto", 56985623);
+            value.Add("Mariana", 54787451);
+
+            // buscar palabra
+            if (value.ContainsKey("Juan"))
+                Console.WriteLine(value["Juan"]);
+
+            else
+                Console.WriteLine("No se encuentara");
+
+
+
+
 
             // recorrer diccionario
 
-            foreach (KeyValuePair<string, int> datos in values) {
+            foreach (KeyValuePair<string, int> datos in value)
+            {
+                
 
-                Console.WriteLine("Nombre: " + datos.Key + " " + "valor " + datos.Value);
+                 Console.WriteLine("Nombre: " + datos.Key + " " + "valor " + datos.Value);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
 
 
             }
 
-            Console.Read();
+            Console.ReadLine();
+
         }
+
+        
     }
+
+    
 }
+
+
