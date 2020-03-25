@@ -1,0 +1,2 @@
+# diccionario
+Primer ejercicio
