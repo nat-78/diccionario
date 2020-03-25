@@ -16,27 +16,35 @@ namespace ejercicio1
 
 
 
-            Dictionary<string, int> value = new Dictionary<string, int>();
+            Dictionary<string, int> values = new Dictionary<string, int>();
             //Rellenar diccionario con add 
 
-            value.Add("Juan", 55423412);
-            value.Add("Ernesto", 56985623);
-            value.Add("Mariana", 54787451);
+            values.Add("Juan", 55423412);
+            values.Add("Ernesto", 56985623);
+            values.Add("Mariana", 54787451);
 
-            // buscar palabra
-            if (value.ContainsKey("Juan"))
-                Console.WriteLine(value["Juan"]);
+            // buscar palabra con containskey
+            if (values.ContainsKey("Juan"))
+                Console.WriteLine(values["Juan"]);
 
             else
                 Console.WriteLine("No se encuentara");
 
-
-
+            // buscar palabra con trygetvalue
+            int ap = 0;
+            if (values.TryGetValue("Pedro", out ap))
+            {
+                Console.WriteLine(values["Pedro"]);
+            }
+            else
+            {
+                Console.WriteLine("No se encuentra Pedro");
+            }
 
 
             // recorrer diccionario
 
-            foreach (KeyValuePair<string, int> datos in value)
+            foreach (KeyValuePair<string, int> datos in values)
             {
                 
 
